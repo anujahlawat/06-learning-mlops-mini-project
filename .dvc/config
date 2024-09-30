@@ -1,0 +1,4 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = /Users/anujahlawat/Documents/ds.datapacker0024/2.8 MLOps/3.3 mini project/temp_remote
