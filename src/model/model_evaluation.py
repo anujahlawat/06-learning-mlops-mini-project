@@ -150,6 +150,19 @@ def main():
             # Save model info
             save_model_info(run.info.run_id, "model", 'reports/experiment_info.json')
             
+            #point 1 :- the imp comment
+            #with mlflow.start_run() as run:
+            #humne ek context manager add kiya ... and uss context manager k ander ... humne ye run bolke variable bnaya ... 
+            #abb ye run k pass info h ... run id ka ... 
+            #m fn bna rha hu ek ... save_model_info() ... and run.info.run_id se run id fetch ho jayegi ... and 
+            #phir hum path bta rhe h ... ki kha hmme run_id ko store krna h ... 'reports/experiment_info.json'
+            #and upper jake dekho iss fn me hum kya kr rhe h ... 
+            #vha hum run_id, model, path ... inn teeno cheejo ko utha k ... model_info naam se file me 
+            #dump kr de rha hu ... 
+            #json.dump(model_info, file, indent=4) ----> for more info see def of fn save_model_info()
+            # note :- reports/experiments_info --> isme run id store ho gyi h ... 
+
+
             # Log the metrics file to MLflow
             mlflow.log_artifact('reports/metrics.json')
 
